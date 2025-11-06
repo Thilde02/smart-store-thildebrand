@@ -1,25 +1,27 @@
-CustomerID,FirstName,LastName,Email,LoyaltyPoints,PreferredContact
+CustomerID,FirstName,Region,DateEnrolled,LoyaltyPoints,PreferredContact
 1000,Robert Gomez,West,2/25/2024,405,Phone
 1001,John Silva,East,12/1/2020,450,Phone
 1002,Mark Marshall,Central,8/8/2020,978,Email
 1003,David Brennan,North,5/21/2020,488,Text
-1004,Kerry Collins,North,9/12/2023,8,Email
+1004,Kerry Collins,North,9/12/2023,8,mail
 1005,Jessica Mora,South,8/5/2021,565,Text
 1006,Hannah Ray,West,7/3/2021,111,Email
 1007,David Kim,West,5/20/2020,108,Email
 1008,William Ramirez,EAST,9/15/2023,489,Phone
 1009,Zachary Bell Jr.,East,4/20/2023,873,Email
+1009,Zachary Bell Jr.,East,4/20/2023,873,Email
 1010,Mike Davis,East,3/23/2022,303,Email
 1011,Amanda Myers,West,9/5/2021,162,Email
 1012,Tara Miller,North,8/10/2020,120,Text
-1013,Alyssa Morgan,North,7/22/2022,76,Phone
+1013,Alyssa Morgan,North,7/22/2022,76,phone
 1014,Cindy Woods,East,4/2/2024,157,Text
 1015,Jennifer Rodgers,North,2/12/2023,264,Phone
 1016,Andrea Roberts,EAST,5/16/2021,531,Text
 1017,Brittney Burnett,North,7/3/2020,269,Text
 1018,Edwin Garrison,south-west,8/31/2020,286,Text
-1019,Michelle Torres,Central,11/18/2020,28,Email
+1019,Michelle Torres,Central,11/18/2020,,Email
 1020,Michelle Brewer,East,7/14/2021,926,Email
+1018,Edwin Garrison,south-west,8/31/2020,286,Text
 1021,Aaron Burnett,South,2/13/2024,45,Phone
 1022,Austin Gutierrez,EAST,11/25/2021,643,Text
 1023,Dustin Medina,east,6/14/2021,732,Email
@@ -42,9 +44,9 @@ CustomerID,FirstName,LastName,Email,LoyaltyPoints,PreferredContact
 1040,Angel Lee,Central,4/8/2022,543,Text
 1041,David Beltran,east,1/18/2021,787,Email
 1042,Christopher Dodson,North,10/30/2023,789,Phone
-1043,Eric Pena,West,6/30/2022,345,Phone
+1043,Eric Pena,West,6/30/2022,345,
 1044,Anita Huerta,East,4/8/2022,260,Email
-1045,Dr. Susan Bailey,North,10/2/2020,973,Phone
+1045,Dr. Susan Bailey,North,10/2/2020,-973,Phone
 1046,Tyler Colon,Central,3/3/2021,30,Phone
 1047,Ashley Pearson,West,10/4/2020,699,Email
 1048,Dr. Donald Proctor,North,3/17/2024,837,Email
