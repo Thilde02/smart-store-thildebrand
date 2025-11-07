@@ -149,3 +149,33 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
+Tiffany Edits
+Data Preparation
+
+Created a Python script named data_scrubber.py located in the src folder.
+This script uses a DataScrubber class to clean and standardize the datasets.
+
+Cleaning Tasks Included:
+
+Removing duplicate rows
+
+Handling missing values (e.g., filling blanks or dropping incomplete rows)
+
+Converting column types (e.g., date or numeric conversions)
+
+Standardizing column names (making them lowercase and replacing spaces with underscores)
+
+DataScrubber Class
+
+The DataScrubber class was designed for reuse across all datasets.
+It includes modular methods to handle each cleaning step and ensures that the same logic can be applied consistently to customers, products, and sales data.
+
+Why This Approach:
+
+Using one shared class instead of separate scripts for each dataset:
+
+Reduces code duplication
+
+Makes the project easier to maintain and expand later
+
+Ensures consistent cleaning logic across all datasets
