@@ -9,7 +9,7 @@ productid,productname,category,unitprice,stockquantity,category.1
 2007,Clothing-Over,Electronics,583.39,156.0,LocalVendor
 2008,Electronics-Skin,Home,66.59,135.0,LocalVendor
 2009,Office-Raise,Clothing,66.31,123.0,SupplierB
-2010,Electronics-Themselves,Clothing,77.84,107.0,SupplierA
+2010,Electronics-Themselves,Clothing,77.84,Unknown,SupplierA
 2011,Electronics-Religious,Clothing,409.74,197.0,SupplierA
 2012,Clothing-Artist,Electronics,623.19,146.0,SupplierA
 2013,Office-Cultural,Home,935.36,41.0,LocalVendor
