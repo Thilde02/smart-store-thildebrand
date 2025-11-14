@@ -179,3 +179,51 @@ Reduces code duplication
 Makes the project easier to maintain and expand later
 
 Ensures consistent cleaning logic across all datasets
+
+Data Warehouse Design ( week 4)
+
+Schema: Star schema
+
+Fact table: fact_sales (stores sales transactions)
+
+Dimension tables: dim_customer (customer info), dim_product (product info)
+
+Relationships: Sales rows reference customers and products through foreign keys.
+
+Purpose: Optimized for quick queries and analytical reporting.
+
+ETL Process
+
+Load cleaned CSV files:
+
+customers_prepared.csv
+
+products_prepared.csv
+
+sales_prepared.csv
+
+Create tables in smart_sales.db if they don’t exist.
+
+Delete old records (if any) to prevent duplication.
+
+Insert data from CSVs into dimension and fact tables using Python and pandas.
+
+Verify the data is correctly loaded into the warehouse.
+
+Challenges Encountered
+
+Some tables were initially in the wrong database (project.db).
+
+Issues opening SQLite in VS Code due to missing sidebar icons and parse errors.
+
+Adjusting file paths for CSVs so ETL script could load data properly.
+
+Solutions Implemented
+
+Created a cleanup Python script to remove incorrect tables from project.db.
+
+Used Command Palette in VS Code to open and query databases.
+
+Updated the ETL script to point explicitly to smart_sales.db and correct CSV paths.
+
+Tested each step in Python before viewing tables in VS Code.
