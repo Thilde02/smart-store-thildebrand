@@ -227,3 +227,7 @@ Used Command Palette in VS Code to open and query databases.
 Updated the ETL script to point explicitly to smart_sales.db and correct CSV paths.
 
 Tested each step in Python before viewing tables in VS Code.
+
+Week 5 - Reporting & OLAP Operations
+
+For Project 5, I built interactive Power BI reports using cleaned CSVs (customers_prepared.csv, products_prepared.csv, sales_prepared.csv) as data sources. I created a star schema with sales_prepared as the fact table and customers_prepared and products_prepared as dimension tables, linking them by customerid and productid. I added a slicer on Region to filter sales by area, a dice using Region + Category to analyze product performance per region, and a drilldown chart with a sale_date hierarchy (Year → Month → Day) to explore seasonal trends. Challenges included phantom duplicate customer IDs, which I cleaned in Power Query, and not being able to connect directly to SQLite, so I used CSVs. The hardest part was fixing duplicate relationships, and the most interesting was seeing interactive visuals in action.
