@@ -231,3 +231,49 @@ Tested each step in Python before viewing tables in VS Code.
 Week 5 - Reporting & OLAP Operations
 
 For Project 5, I built interactive Power BI reports using cleaned CSVs (customers_prepared.csv, products_prepared.csv, sales_prepared.csv) as data sources. I created a star schema with sales_prepared as the fact table and customers_prepared and products_prepared as dimension tables, linking them by customerid and productid. I added a slicer on Region to filter sales by area, a dice using Region + Category to analyze product performance per region, and a drilldown chart with a sale_date hierarchy (Year → Month → Day) to explore seasonal trends. Challenges included phantom duplicate customer IDs, which I cleaned in Power Query, and not being able to connect directly to SQLite, so I used CSVs. The hardest part was fixing duplicate relationships, and the most interesting was seeing interactive visuals in action.
+
+# Week 6 – OLAP Analysis
+
+## 1. Business Goal
+**Goal:** Identify actionable insights from sales data by exploring categories, regions, and dates.
+**Objective:** Understand which product categories generate the most sales, how sales vary by region, and track sales trends over time. This informs marketing, inventory, and promotion decisions.
+
+---
+
+## 2. Data Source
+
+| Table    | Columns Used            | Notes                                           |
+|----------|------------------------|------------------------------------------------|
+| Sales    | saleamount, saledate    | `saleamount` converted to Decimal; `saledate` converted to Date hierarchy |
+| Product  | category, product_name  | Used category for slicing and dicing; product_name optional for dicing |
+| Customer | region                  | Used for dicing and drilldown legend          |
+
+**Source:** Prepared CSV files (Products.csv, Customers.csv, Sales.csv) from Project 5.
+
+---
+
+## 3. Tools
+- **Power BI Desktop** – drag-and-drop OLAP analysis, slicing, dicing, and drilldown.
+- **Features used:**
+  - Bar charts, column charts, line charts
+  - Drilldown hierarchy (Year → Month → Day)
+  - Data labels, titles, and legends
+
+--
+---
+
+## 4. Suggested Business Action
+- Focus inventory and promotions on top-selling categories.
+- Target regions with highest sales for additional marketing campaigns.
+- Monitor sales trends monthly or weekly to adjust stock and promotions.
+
+---
+
+## 7. Challenges
+- Converting `saleamount` to Decimal and `saledate` to Date hierarchy initially caused errors.
+- Power BI drilldown icons were confusing at first.
+- Ensuring aggregation was **Sum** instead of **Count** required attention.
+
+**Resolution:** Fixed data types, checked visual fields, and tested drilldown step-by-step.
+
+---
