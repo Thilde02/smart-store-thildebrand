@@ -259,10 +259,41 @@ For Project 5, I built interactive Power BI reports using cleaned CSVs (customer
   - Drilldown hierarchy (Year → Month → Day)
   - Data labels, titles, and legends
 
---
+--## 4. Workflow & Logic
+
+### Slicing Chart – Total Sales by Category
+- **Visual type:** Stacked bar chart
+- **Fields:**
+  - Axis: `category`
+  - Values: `Sum of saleamount`
+- **Purpose:** Shows a “slice” of sales by product category.
+- **Formatting:** Data labels ON, title = `Sales by Category`.
+- **Insight:** Reveals top-selling categories.
+
+### Dicing Chart – Total Sales by Region and Category
+- **Visual type:** Stacked bar chart
+- **Fields:**
+  - Axis: `region`
+  - Legend: `category`
+  - Values: `Sum of saleamount`
+- **Purpose:** Multi-dimensional breakdown showing sales across **region and category**.
+- **Formatting:** Data labels ON, title = `Dice: Total Sales by Region and Category`.
+- **Insight:** Highlights high-performing regions for each category.
+
+### Drilldown Chart – Sales Over Time
+- **Visual type:** Line chart
+- **Fields:**
+  - X-axis: `saledate` hierarchy (Year → Month → Day)
+  - Values: `Sum of saleamount`
+  - Legend (optional): `region` or `category`
+- **Purpose:** Drill from **Year → Month → Day** to track sales trends.
+- **Formatting:** Data labels ON, title = `Drilldown: Total Sales by Date (Year → Month → Day)`
+- **Insight:** Shows seasonal trends and daily patterns.
+
+---
 ---
 
-## 4. Suggested Business Action
+## 5. Suggested Business Action
 - Focus inventory and promotions on top-selling categories.
 - Target regions with highest sales for additional marketing campaigns.
 - Monitor sales trends monthly or weekly to adjust stock and promotions.
