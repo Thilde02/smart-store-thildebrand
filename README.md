@@ -308,3 +308,126 @@ For Project 5, I built interactive Power BI reports using cleaned CSVs (customer
 **Resolution:** Fixed data types, checked visual fields, and tested drilldown step-by-step.
 
 ---
+
+Week 7: Custom BI Project
+
+1. Business Goal
+
+The goal of this BI project is to analyze loyalty program customers and identify which segments (High-Value, Medium-Value, Low-Value) generate the highest revenue. This will help the business understand customer spending patterns and support smarter marketing and retention strategies.
+
+2. Data Source
+
+The dataset comes from the provided project files and includes:
+
+Customer demographics
+
+Loyalty points
+
+Sales transactions
+
+Customer IDs
+
+Transaction counts
+
+I cleaned the loyaltypoints column (removing invalid text values) and categorized customers using DAX in Power BI.
+
+3. Tools Used
+
+Power BI Desktop for data modeling and dashboards
+
+Power Query for cleaning data
+
+DAX for calculated columns and customer segmentation
+
+GitHub for project version control and submission
+
+Markdown for documentation
+
+4. Workflow & Logic
+
+Loaded data into Power BI.
+
+Cleaned loyaltypoints by replacing text values (“unknown”) with null.
+
+Converted loyaltypoints to Whole Number.
+
+Created CustomerSegment column using DAX:
+
+CustomerSegment =
+IF(
+    Customers_prepared[loyaltypoints] >= 800, "High-Value",
+    IF(Customers_prepared[loyaltypoints] >= 400, "Medium-Value", "Low-Value")
+)
+
+
+Built the visuals:
+
+Clustered Bar Chart: Sale Amount by Customer ID & Segment
+
+Pie Chart: Sale Amount by Segment
+
+Matrix Table: Customer ID, Segment, Sale Amount, and Transaction Count
+
+Sorted visuals to highlight top performers.
+
+5. Results (Narrative + Visuals)
+Key Insights from the Dashboard
+
+High-Value customers contribute most of the total revenue, despite being a smaller portion of the customer base.
+
+Medium-Value customers show strong potential and could be upgraded into High-Value with targeted incentives.
+
+Low-Value customers represent the largest count, but their total spending is significantly lower.
+
+The matrix table clearly highlights top individual customers, with several generating $15K–$23K in total sales.
+
+Some customers with low loyalty points still spend above average — suggesting loyalty score may not always reflect purchasing behavior.
+
+Your visuals (bar chart, pie chart, and matrix table) clearly support these findings.
+
+6. Suggested Business Actions
+
+Based on the analysis:
+
+Target High-Value customers with VIP rewards to maintain loyalty and prevent churn.
+
+Create incentives for Medium-Value customers to encourage higher spending (personalized discounts, bonus point events).
+
+Re-engage Low-Value customers with low-cost marketing campaigns or introductory loyalty perks.
+
+Improve loyalty scoring accuracy since spending does not always match loyaltypoints.
+
+7. Challenges
+
+Converting the loyaltypoints column to numeric failed due to text-based values like “unknown”.
+
+The DAX formula initially generated type errors because the column contained mixed data types.
+
+Understanding Power BI’s Matrix Table sorting options required trial and error.
+
+Cleaning and transforming fields across multiple tables required careful attention to data types.
+
+8. Ethical Considerations (BI Ethics & AI)
+Responsible Use of Data
+
+Customer data must be used only for improving service — not for discrimination or unfair targeting.
+
+Sensitive personal information should not influence segmentation.
+
+Bias Risks
+
+If loyalty points or historical data contain biases, the model could unfairly label customers.
+
+High spenders could receive all rewards while low-income customers are ignored, creating unequal experiences.
+
+Data Limitations
+
+Some customer data is incomplete, outdated, or inconsistent (e.g., missing loyalty points).
+
+Automated segmentation should not be the only factor in decision-making.
+
+Responsible AI Use
+
+Insights should support decisions, not replace human judgment.
+
+The company should regularly audit BI dashboards for fairness and accuracy.
